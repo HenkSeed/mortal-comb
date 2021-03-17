@@ -1,1 +1,1 @@
-# Mortal Combat - release of the new film
+# Mortal Kombat - release of the new film
