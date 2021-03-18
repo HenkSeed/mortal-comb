@@ -4,7 +4,7 @@
 
 body {
 	background: #010202;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 a {
@@ -43,16 +43,29 @@ a {
 	border-radius: 50%;
 }
 
+/*
 .app {
 	background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%),
-		url("../img/cover-image.jpg") no-repeat top right;
+		url("../img/cover-image.jpg") no-repeat center right;
+	min-height: 100vh;
+	color: #ffffff;
+}
+*/
+
+.app {
+	background: linear-gradient(
+		90deg,
+		#010202 0%,
+		#010202 43%,
+		rgba(1, 2, 2, 0.2) 90.9%
+	);
 	min-height: 100vh;
 	color: #ffffff;
 }
 
 .film {
-	width: 90%;
-	max-width: 1146px;
+	width: 90%; /*		\ Эта конструкция позволяет "бороться" с "прилипанием" блока к границе */
+	max-width: 1146px; /*		/ экрана при уменьшении его (экрана) размеров */
 	margin: auto;
 	padding: 7% 0;
 }
@@ -61,6 +74,7 @@ a {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
+	flex-wrap: wrap; /* при уменьшении размеров окна текст переносится на новую строку */
 	opacity: 0.4;
 	color: #e5e5e5;
 	font-size: 16px;
@@ -69,6 +83,7 @@ a {
 .tags > * {
 	/* Все элементы внутри блока с классом .tags */
 	margin-right: 15px;
+	margin-bottom: 10px;
 }
 
 .age {
@@ -104,4 +119,39 @@ a {
 .button-text {
 	margin-left: 10px;
 	vertical-align: text-bottom;
+}
+
+@media (max-width: 768px) {
+	.app {
+		height: auto;
+		padding-bottom: 400px;
+		background-position: bottom center;
+		background: url('../img/cover-image.jpg') no-repeat bottom center / 300px;
+	}
+	video {
+		display: none;
+	}
+	.film {
+		padding-top: 2%;
+	}
+	.description {
+		font-size: 16px;
+		max-width: 333px;
+	}
+	.film-logo {
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 576px) {
+	.button-text {
+		display: none;
+	}
+	.user-name {
+		display: none;
+	}
+	.app {
+		padding-bottom: 350px;
+		background-size: 300px;
+	}
 }
