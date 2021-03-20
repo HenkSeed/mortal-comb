@@ -125,8 +125,8 @@ a {
 	.app {
 		height: auto;
 		padding-bottom: 400px;
-		background-position: bottom center;
-		background: url('../img/cover-image.jpg') no-repeat bottom center / 300px;
+		/* background-position: bottom center; */
+		background: url('../img/cover-image.jpg') no-repeat bottom center / 300px; /* Размер картинки 300px */
 	}
 	video {
 		display: none;
@@ -152,6 +152,16 @@ a {
 	}
 	.app {
 		padding-bottom: 350px;
-		background-size: 300px;
+		background-size: 300px; /* Держит фоновую картинку в одном размере (в этом медиа-запросе) */
 	}
+	.button {
+		margin-bottom: 10px;
+	}
+	/*
+	.button-group {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+	}
+	*/
 }
