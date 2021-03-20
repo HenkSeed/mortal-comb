@@ -121,7 +121,7 @@ a {
 	vertical-align: text-bottom;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
 	.app {
 		height: auto;
 		padding-bottom: 400px;
