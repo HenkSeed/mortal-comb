@@ -73,7 +73,7 @@ a {
 .tags {
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: center;
 	flex-wrap: wrap; /* при уменьшении размеров окна текст переносится на новую строку */
 	opacity: 0.4;
 	color: #e5e5e5;
@@ -90,7 +90,7 @@ a {
 	border: 1px solid #ffffff;
 	box-sizing: border-box;
 	border-radius: 2px;
-	padding: 1px 5px;
+	padding: 1px 5px 2px 5px;
 }
 
 .description {
